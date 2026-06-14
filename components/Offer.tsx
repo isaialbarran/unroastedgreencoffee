@@ -1,11 +1,16 @@
 "use client";
 
+import Image from "next/image";
 import { useLang } from "./LangProvider";
 
 export function Offer() {
   const { t } = useLang();
 
-  const cards = [t.offer.specialty, t.offer.commercial];
+  // Sustituye public/images/specialty.jpg y commercial.jpg por fotos reales (1200×900).
+  const cards = [
+    { ...t.offer.specialty, image: "/images/specialty.jpg" },
+    { ...t.offer.commercial, image: "/images/commercial.jpg" },
+  ];
 
   return (
     <section id="offer" className="bg-white py-24">
@@ -19,8 +24,15 @@ export function Offer() {
               key={card.title}
               className="rounded-2xl border border-stone-200 bg-stone-50 p-8 transition hover:border-green-300 hover:shadow-sm"
             >
-              {/* Espacio para foto del café verde según el tipo de semilla. */}
-              <div className="mb-6 h-40 w-full rounded-xl bg-gradient-to-br from-green-200 to-green-400" />
+              <div className="relative mb-6 h-40 w-full overflow-hidden rounded-xl">
+                <Image
+                  src={card.image}
+                  alt={card.title}
+                  fill
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
               <h3 className="text-xl font-semibold text-green-900">
                 {card.title}
               </h3>
