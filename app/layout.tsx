@@ -31,6 +31,38 @@ export const metadata: Metadata = {
   },
 };
 
+const SITE_URL = "https://www.unroastedgreencoffee.com";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      name: config.brand,
+      url: SITE_URL,
+      email: config.email,
+      description:
+        "Green coffee supplier of specialty and commercial unroasted beans for roasters and buyers.",
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": `${SITE_URL}/#localbusiness`,
+      name: config.brand,
+      url: SITE_URL,
+      email: config.email,
+      telephone: config.whatsapp.display,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: config.office.street,
+        addressLocality: config.office.city,
+        postalCode: config.office.postalCode,
+        addressCountry: config.office.country,
+      },
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -39,6 +71,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <LangProvider>{children}</LangProvider>
         <Analytics />
       </body>
