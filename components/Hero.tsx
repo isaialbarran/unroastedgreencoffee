@@ -17,7 +17,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(255,255,255,0.18),_transparent_60%)]" />
 
       <div className="relative mx-auto w-full max-w-6xl px-6 py-32 text-white">
-        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-green-200">
+        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-green-100">
           {t.hero.eyebrow}
         </p>
         <h1 className="max-w-3xl text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">
