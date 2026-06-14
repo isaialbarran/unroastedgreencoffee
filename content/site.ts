@@ -14,9 +14,9 @@ export const config = {
   siteUrl: "https://www.unroastedgreencoffee.com",
   email: "josealbarran@unroastedgreencoffee.com",
   whatsapp: {
-    display: "+1 786 935 4213",
+    display: "+1 (407) 483-6794",
     // Solo dígitos, para el enlace wa.me
-    number: "17869354213",
+    number: "14074836794",
   },
   office: {
     street: "30 N Gould St",
