@@ -9,7 +9,7 @@ export function Footer() {
   const year = 2026;
 
   return (
-    <footer className="bg-green-950 py-8 text-center text-sm text-green-300/80">
+    <footer className="bg-green-950 py-8 text-center text-sm text-green-200">
       <p>
         © {year} {config.brand}. {t.footer.rights}
       </p>

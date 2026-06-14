@@ -30,11 +30,11 @@ export function Contact() {
           </a>
         </div>
 
-        <div className="mt-8 text-sm text-green-200">
+        <div className="mt-8 text-sm text-green-100">
           <a href={`mailto:${config.email}`} className="hover:text-white">
             {config.email}
           </a>
-          <span className="mx-3 text-green-400">·</span>
+          <span className="mx-3 text-green-300">·</span>
           <a href={waLink} className="hover:text-white">
             {config.whatsapp.display}
           </a>
