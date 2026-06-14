@@ -5,7 +5,7 @@ import { LangProvider } from "@/components/LangProvider";
 import { config } from "@/content/site";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.unroastedgreencoffee.com"),
+  metadataBase: new URL(config.siteUrl),
   title: `${config.brand} — Specialty & commercial green coffee supplier`,
   description:
     "Unroasted Green Coffee — green coffee supplier of specialty and commercial unroasted beans for roasters and buyers.",
@@ -22,12 +22,12 @@ export const metadata: Metadata = {
     title: `${config.brand} — Green coffee supplier`,
     description:
       "Specialty and commercial unroasted green coffee for roasters and buyers.",
-    url: "https://www.unroastedgreencoffee.com",
+    url: config.siteUrl,
     siteName: config.brand,
     type: "website",
   },
   alternates: {
-    canonical: "https://www.unroastedgreencoffee.com",
+    canonical: config.siteUrl,
   },
 };
 
