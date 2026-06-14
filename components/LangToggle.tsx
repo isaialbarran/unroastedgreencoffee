@@ -6,7 +6,11 @@ export function LangToggle() {
   const { lang, setLang } = useLang();
 
   return (
-    <div className="inline-flex items-center rounded-full border border-white/30 text-xs font-medium">
+    <div
+      role="group"
+      aria-label={lang === "es" ? "Idioma" : "Language"}
+      className="inline-flex items-center rounded-full border border-white/30 text-xs font-medium"
+    >
       <button
         type="button"
         onClick={() => setLang("en")}
