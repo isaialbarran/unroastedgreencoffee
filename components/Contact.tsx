@@ -35,7 +35,12 @@ export function Contact() {
             {config.email}
           </a>
           <span className="mx-3 text-green-300">·</span>
-          <a href={`tel:+${config.whatsapp.number}`} className="hover:text-white">
+          <a
+            href={waLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white"
+          >
             {config.whatsapp.display}
           </a>
         </div>
