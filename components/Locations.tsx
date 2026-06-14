@@ -22,7 +22,7 @@ export function Locations() {
           <address className="mt-2 not-italic leading-relaxed text-stone-700">
             {office.street}
             <br />
-            {office.postalCode} {office.city}
+            {office.city}, {office.state} {office.postalCode}
             <br />
             {office.country}
           </address>
