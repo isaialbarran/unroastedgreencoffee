@@ -5,11 +5,14 @@ import { useLang } from "./LangProvider";
 import { LangToggle } from "./LangToggle";
 
 export function Header() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
 
   return (
     <header className="absolute inset-x-0 top-0 z-20">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 text-white">
+      <nav
+        aria-label={lang === "es" ? "Principal" : "Primary"}
+        className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 text-white"
+      >
         <a href="#top" className="text-sm font-semibold tracking-wide">
           {config.brand}
         </a>
