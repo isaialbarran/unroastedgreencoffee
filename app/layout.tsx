@@ -62,6 +62,7 @@ const jsonLd = {
         "@type": "PostalAddress",
         streetAddress: config.office.street,
         addressLocality: config.office.city,
+        addressRegion: config.office.state,
         postalCode: config.office.postalCode,
         addressCountry: config.office.country,
       },
