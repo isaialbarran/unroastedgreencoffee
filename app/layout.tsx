@@ -26,6 +26,12 @@ export const metadata: Metadata = {
     siteName: config.brand,
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: `${config.brand} — Green coffee supplier`,
+    description:
+      "Specialty and commercial unroasted green coffee for roasters and buyers.",
+  },
   alternates: {
     canonical: config.siteUrl,
   },
