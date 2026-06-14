@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { config } from "@/content/site";
 import { useLang } from "./LangProvider";
 
@@ -12,9 +13,16 @@ export function Hero() {
       id="top"
       className="relative flex min-h-[88vh] items-center overflow-hidden"
     >
-      {/* Fondo: degradado verde montaña. Reemplazable por una foto en /public. */}
-      <div className="absolute inset-0 bg-gradient-to-b from-green-700 via-green-800 to-green-950" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(255,255,255,0.18),_transparent_60%)]" />
+      {/* Fondo: foto principal (public/hero.jpg) con overlay para legibilidad del texto. */}
+      <Image
+        src="/hero.jpg"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-green-900/80 via-green-900/70 to-green-950/90" />
 
       <div className="relative mx-auto w-full max-w-6xl px-6 py-32 text-white">
         <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-green-100">
