@@ -10,6 +10,8 @@ export type Lang = "en" | "es";
 
 export const config = {
   brand: "Unroasted Green Coffee",
+  // URL canónica del sitio (sin barra final). Fuente única para metadata, robots y sitemap.
+  siteUrl: "https://www.unroastedgreencoffee.com",
   email: "josealbarran@unroastedgreencoffee.com",
   whatsapp: {
     display: "+1 407 483 6794",

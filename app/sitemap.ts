@@ -1,11 +1,10 @@
 import type { MetadataRoute } from "next";
-
-const BASE_URL = "https://www.unroastedgreencoffee.com";
+import { config } from "@/content/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: BASE_URL,
+      url: config.siteUrl,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 1,
