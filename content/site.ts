@@ -14,15 +14,16 @@ export const config = {
   siteUrl: "https://www.unroastedgreencoffee.com",
   email: "josealbarran@unroastedgreencoffee.com",
   whatsapp: {
-    display: "+1 407 483 6794",
+    display: "+1 786 935 4213",
     // Solo dígitos, para el enlace wa.me
-    number: "14074836794",
+    number: "17869354213",
   },
   office: {
-    street: "Calle Preciados",
-    city: "Madrid",
-    postalCode: "28004",
-    country: "Spain",
+    street: "30 N Gould St",
+    city: "Sheridan",
+    state: "WY",
+    postalCode: "82801",
+    country: "USA",
   },
 } as const;
 
